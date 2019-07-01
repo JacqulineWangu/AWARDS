@@ -27,7 +27,7 @@ def new_project(request):
         return redirect('home')
     else:
         form = ProjectForm()
-    return render(request,"Moringa_Project_Awards/new_project.html",{"form":form})
+    return render(request,"AWARDS/new_project.html",{"form":form})
 
 @login_required(login_url='/accounts/login/')
 def new_profile(request):
@@ -111,7 +111,7 @@ def project_review(request,project_id):
 
     except Exception as  e:
         raise Http404()
-    return render(request,'Moringa_Project_Awards/project_review.html',{"vote_form":vote_form,"single_project":single_project,"average_score":average_score})
+    return render(request,'AWARDS/project_review.html',{"vote_form":vote_form,"single_project":single_project,"average_score":average_score})
 
 class ProfileList(APIView):
     def get(self,request,format=None):
