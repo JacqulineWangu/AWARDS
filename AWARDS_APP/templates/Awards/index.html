@@ -5,14 +5,15 @@
  <style>
     body {
 
-        background-color: grey;
+        background-color: lightgrey;
     }
 </style>
 
 <div class="container-fluid">
     <div>
-        <h4 class="text-center heading">Lets go...</h4>
+       
         <h1 class="text-center heading"><i class="fas fa-award"></i> AWARDS</h1>
+         <h4 class="text-center heading">Lets go...</h4>
     </div>
     <div class="row">
         {% for image in all_images%}
@@ -34,7 +35,7 @@
                     <p class="card-text">{{image.details}}</p>
                     <p><a href="{{image.link}}">Live Project Link</a></p>                    
                     
-                    <a href="{% url 'project_review' image.pk %}" class="btn btn-danger btn-md">Review Project</a>
+                    <a href="{% url 'project_review' image.pk %}" class="btn btn-primary btn-md">Review Project</a>
 
                 </div>
             </div>
