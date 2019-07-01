@@ -10,3 +10,7 @@ from rest_framework.views import APIView
 from .serializer import ProfileSerializer,ProjectSerializer
 
 # Create your views here.
+
+def home(request):
+    all_projects = Project.fetch_all_images()
+    return render(request,"AWARDS/index.html",{"all_images":all_projects})
