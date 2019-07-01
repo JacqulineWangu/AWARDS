@@ -13,7 +13,7 @@ from .serializer import ProfileSerializer,ProjectSerializer
 
 def home(request):
     all_projects = Project.fetch_all_images()
-    return render(request,"AWARDS/index.html",{"all_images":all_projects})
+    return render(request,"Awards/index.html",{"all_images":all_projects})
 
 @login_required(login_url='/accounts/login/')
 def new_project(request):
@@ -27,7 +27,7 @@ def new_project(request):
         return redirect('home')
     else:
         form = ProjectForm()
-    return render(request,"AWARDS/new_project.html",{"form":form})
+    return render(request,"Awards/new_project.html",{"form":form})
 
 @login_required(login_url='/accounts/login/')
 def new_profile(request):
@@ -111,7 +111,7 @@ def project_review(request,project_id):
 
     except Exception as  e:
         raise Http404()
-    return render(request,'AWARDS/project_review.html',{"vote_form":vote_form,"single_project":single_project,"average_score":average_score})
+    return render(request,'Awards/project_review.html',{"vote_form":vote_form,"single_project":single_project,"average_score":average_score})
 
 class ProfileList(APIView):
     def get(self,request,format=None):

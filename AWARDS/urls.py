@@ -20,7 +20,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'',include('AWARDS.urls')),
+    url(r'',include('AWARDS_APP.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^logout/$', views.logout, {"next_page": '/'}),
     url(r'^api-token-auth/', obtain_auth_token)
