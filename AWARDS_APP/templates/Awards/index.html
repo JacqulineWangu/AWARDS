@@ -5,24 +5,24 @@
 
     <div style="background-color:beige; height:30vh;">
        
-        <h1 class="text-center heading"><i class="fas fa-award"></i> AWARDS</h1>
+        <h1 class="text-center heading"><i class="fas fa-award"  style="margin-top:50px;"></i  style="margin-top:50px;"> AWARDS</h1>
          <h4 class="text-center heading">Lets go...</h4>
     </div>
 
 
- <style>
+ {% comment %} <style>
     body {
 
         background-color: lightgrey;
     }
-</style>
+</style> {% endcomment %}
 
 <div class="container-fluid">
     
-    <div class="row">
+    <div class="row" style="background-color: lightgrey; margin-top:30px;">
         {% for image in all_images%}
 
-        <div class="col-md-4 main-page d-flex" style=" margin-top: 5px;">
+        <div class="col-md-4 main-page d-flex" style=" margin-top: 40px; margin-bottom:50px;">
             <div class="card card-cascade wider flex-fill ">
 
                 <!-- Card image -->
@@ -59,6 +59,13 @@
 
 
         {% empty %}
+<style>
+    body {
+
+        background-color: lightgrey;
+    }
+</style>
+
         <div class="container">
         <div class="row">
             <h1 class="text-center" style="font-style:italics;"> No Images Yet</h1>
